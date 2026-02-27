@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalpana Chawla - Interactive Animated Project</title>
+
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Body */
+body{
+    font-family: Arial, sans-serif;
+    background:#eef2f7;
+    line-height:1.8;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav{
+    background:#0b3d91;
+    padding:15px;
+    position: sticky;
+    top:0;
+    z-index:100;
+    text-align:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+    transition: 0.3s;
+}
+nav a:hover{
+    color:yellow;
+}
+
+/* Header */
+header{
+    background: linear-gradient(to right,#0b3d91,#2563eb);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+/* Container */
+.container{
+    width:85%;
+    margin:30px auto;
+}
+
+/* Card */
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.card.show{
+    opacity:1;
+    transform: translateY(0);
+}
+.card:hover{
+    background:#f0f8ff;
+}
+
+/* Card Title */
+.card h2{
+    color:#0b3d91;
+}
+
+/* Image */
+.image{
+    text-align:center;
+}
+.image img{
+    width:250px;
+    border-radius:12px;
+    transition: transform 0.5s;
+}
+.image img:hover{
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Footer */
+footer{
+    background:#0b912f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Buttons */
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#1e40af;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{width:95%;}
+    header h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#photo">होम</a>
+    <a href="#birth">जीवन</a>
+    <a href="#education">शिक्षा</a>
+    <a href="#mission">मिशन</a>
+    <a href="#achievements">उपलब्धियाँ</a>
+</nav>
+
+<header>
+    <h1>कल्पना चावला</h1><img src="kalpna chabla.jfif" alt="Mera Photo" width="400">
+
+    <p>भारत की पहली महिला अंतरिक्ष यात्री</p>
+</header>
+
+<div class="container">
+
+<!-- 1. Photo -->
+<div class="card image" id="photo">
+    <h2></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Kalpana_Chawla%2C_NASA_photo_portrait_in_orange_suit.jpg" alt="Kalpana Chawla">
+</div>
+
+<!-- 1 . Birth -->
+<div class="card" id="birth">
+    <h2>1. जन्म और प्रारंभिक जीवन</h2><img src="kalpna chabla.jfif"><width=
+    <p>जन्म: 17 मार्च 1962, करनाल, हरियाणा, भारत। बचपन से ही उड़ान और अंतरिक्ष में रुचि।</p>
+</div>
+
+<!-- 2. Full Address -->
+<div class="card">
+    <h2>2. पूरा पता</h2>
+    <p>करनाल शहर, हरियाणा राज्य, भारत।</p>
+</div>
+
+<!-- 3. Education -->
+<div class="card" id="education">
+    <h2>3. शिक्षा</h2>
+    <p>पंजाब इंजीनियरिंग कॉलेज से एयरोनॉटिकल इंजीनियरिंग। अमेरिका से मास्टर और पीएचडी।</p>
+</div>
+
+<!-- 4. NASA Selection -->
+<div class="card" id="mission">
+    <h2>4. NASA में चयन</h2>
+    <p>1994 में NASA द्वारा अंतरिक्ष यात्री के रूप में चयनित।</p>
+</div>
+
+<!-- 5. First Space Mission -->
+<div class="card">
+    <h2>5. पहली अंतरिक्ष यात्रा</h2>
+    <p>1997 – STS-87 मिशन, स्पेस शटल कोलंबिया।</p>
+</div>
+
+<!-- 6. Second Space Mission -->
+<div class="card">
+    <h2>6. दूसरी अंतरिक्ष यात्रा</h2>
+    <p>2003 – STS-107 मिशन, वैज्ञानिक प्रयोगों में भाग लिया।</p>
+</div>
+
+<!-- 7. Achievements -->
+<div class="card" id="achievements">
+    <h2>7. उपलब्धियाँ</h2>
+    <ul>
+        <li>भारत की पहली महिला अंतरिक्ष यात्री</li>
+        <li>NASA मिशन विशेषज्ञ</li>
+        <li>लाखों युवाओं की प्रेरणा</li>
+    </ul>
+</div>
+
+<!-- 8. Death -->
+<div class="card">
+    <h2>8. दुर्घटना और निधन</h2>
+    <p>1 फरवरी 2003 को स्पेस शटल कोलंबिया दुर्घटनाग्रस्त हुआ। सभी 7 अंतरिक्ष यात्रियों का निधन।</p>
+</div>
+
+<!-- 9. Inspiration -->
+<div class="card">
+    <h2>9. प्रेरणा संदेश</h2>
+    <p>"सपनों से सफलता तक का रास्ता हमेशा मौजूद होता है। उसे देखने की दृष्टि और साहस होना चाहिए।"</p>
+    <button onclick="alert('आप भी अपने सपनों को पूरा कर सकते हैं!')">प्रेरित करें</button>
+</div>
+
+</div>
+
+<footer>
+    © 2026 Kalpana Chawla | Interactive Animated Project
+</footer>
+
+<script>
+// Scroll Reveal Effect
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', checkCards);
+
+function checkCards(){
+    const triggerBottom = window.innerHeight / 5 * 4;
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+            card.classList.add('show');
+        } else{
+            card.classList.remove('show');
+        }
+    });
+}
+
+// Initial call
+checkCards();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
